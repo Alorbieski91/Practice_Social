@@ -30,9 +30,9 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['libro-de-mijos.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['libro-de-mijos.herokuapp.com',]
 
 
 # Application definition
@@ -135,7 +135,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = BASE_DIR / 'static'
 
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
