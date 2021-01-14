@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
+{% load socialaccount %}
 
 {% block content %}
     <div class="container-fluid">
@@ -9,6 +10,8 @@
             {% bootstrap_form form %}
             <input type="submit" class="btn btn-outline-primary" value="Sign Up">
         </form>
+        <h6>OR</h6>
+        <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}">Signup with Google</a>
     </div>
 {% endblock %}
     
