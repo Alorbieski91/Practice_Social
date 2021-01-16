@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load socialaccount %}
+{% load django_bootstrap_icons %}
 
 {% block content %}
     <div class="container-fluid">
@@ -11,7 +12,7 @@
             <input type="submit" class="btn btn-outline-primary" value="Sign Up">
         </form>
         <h6>OR</h6>
-        <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}">Signup with Google</a>
+        <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}">Signup with {% bs_icon 'google' %}</a>
     </div>
 {% endblock %}
     

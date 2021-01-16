@@ -6,7 +6,9 @@
     <form id="postForm" action="{% url 'posts:create' %}" method="POST">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <input type="submit" value="Post" class="btn btn-primary btn-lg">
+        {% buttons %}
+            <input type="submit" value="Post" class="btn btn-primary btn-lg">
+        {% endbuttons %}
     </form>
 {% endblock %}
     
