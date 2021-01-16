@@ -27,17 +27,17 @@
 <div class="col-md-8">
     <div class="list-group">  
         {% for group in object_list %}
-            <a class="list-group-item" href="{% url 'groups:single' slug=group.slug %}">
-                <h3 class="title list-group-item-heading">{{ group.name }}</h3>
-                <div class="list-group-item-text container-fluid">
+            <a class="list-group-item list-group-item-action" href="{% url 'groups:single' slug=group.slug %}">
+                <h3 class="mb-1">{{ group.name }}</h3>
+                <div class="mb-1 container-fluid">
                     {{ group.description_html|safe }}
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-6">
                             <button type="button" class="btn btn-primary">
                             Members <span class="badge bg-light text-dark">{{ group.members.count }}</span>
                             </button>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-6">
                             <button type="button" class="btn btn-primary">
                             Posts <span class="badge bg-light text-dark">{{ group.posts.count }}</span>
                             </button>
