@@ -9,9 +9,9 @@
         <form method="POST">
             {% csrf_token %}
             {% bootstrap_form form %}
-            <input type="submit" class="btn btn-outline-primary" value="Sign Up">
+            <input type="submit" class="btn btn-outline-primary mt-1" value="Sign Up">
         </form>
-        <h6>OR</h6>
+        <hr>
         <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}">Signup with {% bs_icon 'google' %}</a>
     </div>
 {% endblock %}

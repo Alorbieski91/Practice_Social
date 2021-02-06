@@ -1,7 +1,9 @@
 {% load django_bootstrap_icons %}
-<div class="post media">
+<div class="post media mt-2" style="border: solid black 1px;">
+    <div class="container">
     <p>{{ post.message_html|safe }}</p>
-    <div class="media=body">
+    <hr>
+    <div class="media-body">
         <h5 class="media-heading">
         <span class="username">
             <a style="text-decoration: none;" href="{% url 'posts:for_user' username=post.user.username %}">@{{ post.user.username }}</a>
@@ -12,11 +14,12 @@
         </h5>
         <div class="media-footer">
             {% if user.is_authenticated and post.user == user and not hide_delete %}
-                <a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn btn-danger">
+                <a href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn btn-danger mb-1">
                     {% bs_icon 'x-circle' %}
                     Delete
                 </a>
             {% endif %}        
         </div>
+    </div>
     </div>
 </div>

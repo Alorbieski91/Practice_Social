@@ -2,12 +2,11 @@
 {% load bootstrap4 %}
 
 {% block group_content %}
-    <h4>Create A New Group!</h4>
+    <h4 class="display-4 text-center">Create A New Group</h4>
     <form action="{% url 'groups:create' %}" method="POST" id="groupForm">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <p></p>
-        <input type="submit" class="btn btn-primary btn-lg" value="Create Group">
+        <input type="submit" class="btn btn-primary btn-lg mt-3" value="Create Group">
     </form>
 {% endblock %}
     
