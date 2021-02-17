@@ -1,6 +1,10 @@
 {% extends 'posts/post_base.html' %}
 {% load bootstrap4 %}
 
+
+{% block title_block %}Libro de Amigos - Create Post{% endblock title_block %}
+    
+
 {% block post_content %}
     <h4 class="display-4 text-center">Create A New Post</h4>
     <form id="postForm" action="{% url 'posts:create' %}" method="POST">

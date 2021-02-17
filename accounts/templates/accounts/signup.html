@@ -4,15 +4,15 @@
 {% load django_bootstrap_icons %}
 
 {% block content %}
-    <div class="container-fluid">
-        <h1>Sign Up</h1>
+    <div class="col-md-6 mx-auto">
+        <h1 class="display-1 text-center">Sign Up</h1>
         <form method="POST">
             {% csrf_token %}
             {% bootstrap_form form %}
-            <input type="submit" class="btn btn-outline-primary mt-1" value="Sign Up">
+            <input type="submit" class="btn btn-primary mt-1" value="Sign Up">
         </form>
         <hr>
-        <a class="btn btn-outline-primary" href="{% provider_login_url 'google' %}">Signup with {% bs_icon 'google' %}</a>
+        <a class="btn btn-primary" href="{% provider_login_url 'google' %}">Signup with {% bs_icon 'google' %}</a>
     </div>
 {% endblock %}
     

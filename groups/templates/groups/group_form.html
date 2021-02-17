@@ -1,6 +1,9 @@
 {% extends 'groups/group_base.html' %}
 {% load bootstrap4 %}
 
+{% block title_block %}Libro de Amigos - Create Group{% endblock title_block %}
+    
+
 {% block group_content %}
     <h4 class="display-4 text-center">Create A New Group</h4>
     <form action="{% url 'groups:create' %}" method="POST" id="groupForm">
